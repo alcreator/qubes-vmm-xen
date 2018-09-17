@@ -1,0 +1,23 @@
+When building for a i686 target, Werror will halt compilation for certain tools.
+Remove these to allow a 32-bit build to succeed.
+--- a/tools/libxl/Makefile
++++ b/tools/libxl/Makefile
+@@ -11,7 +11,7 @@
+ XLUMAJOR = 4.8
+ XLUMINOR = 0
+ 
+-CFLAGS += -Werror -Wno-format-zero-length -Wmissing-declarations \
++CFLAGS += -Wno-format-zero-length -Wmissing-declarations \
+ 	-Wno-declaration-after-statement -Wformat-nonliteral
+ CFLAGS += -I. -fPIC
+
+--- a/tools/xenpmd/Makefile
++++ b/tools/xenpmd/Makefile
+@@ -1,7 +1,6 @@
+ XEN_ROOT=$(CURDIR)/../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-CFLAGS += -Werror
+ CFLAGS += $(CFLAGS_libxenstore)
+ 
+ LDLIBS += $(LDLIBS_libxenstore)

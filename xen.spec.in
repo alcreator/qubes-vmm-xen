@@ -221,6 +221,7 @@ Patch712: patch-tools-xenpmd-fix-possible-0-truncation.patch
 Patch713: patch-tools-gdbsx-fix-Wstringop-truncation-warning.patch
 Patch714: patch-tools-kdd-mute-spurious-gcc-warning.patch
 Patch715: patch-stubdom-apply-gcc-8-fix-for-tpm-emulator.patch
+Patch716: patch-remove-werror-from-tools-to-compile-for-32-bit.patch
 
 # vchan for stubdom:
 Patch801: patch-0100-minios-enhance-xenstore-available-for-stubdoms.patch
